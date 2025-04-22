@@ -20,7 +20,7 @@ body {
 /* Transparent Header styles */
 header {
     background-color: transparent;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,14 +38,21 @@ header.scrolled {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+  height: 60px; /* Adjust based on your header height */
+  display: flex;
+  align-items: center;
 }
 
-.logo a {
-    color: rgb(224, 190, 19);
-    text-decoration: none;
-    font-weight: 700;
+.logo-image {
+  height: 50px; /* Slightly smaller than container */
+  width: auto; /* Maintains aspect ratio */
+  transition: all 0.3s ease;
+}
+
+/* Optional hover effect */
+.logo-image:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 nav ul {
@@ -58,11 +65,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(5, 188, 234); /* Croatian blue */
+    color: rgb(255, 255, 255); /* Croatian blue */
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    font-size: 1.3rem;
 }
 
 nav ul li a:hover {
@@ -128,4 +136,107 @@ p {
     section {
         padding: 2rem;
     }
+}
+
+.hero {
+  animation: fadeIn 1.5s ease-in-out;
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align to top instead of center */
+    padding-top: 6rem; /* Adjust this value to move content higher */
+    min-height: 100vh; /* Maintain full viewport height */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero h1 {
+  -webkit-text-stroke: 2px #000000; /* For Chrome/Safari */
+  text-stroke: 2px #000000; /* Standard property */
+  color: rgb(0, 0, 0);
+}
+
+.popular-foods {
+  padding: 4rem 2rem;
+  background: transparent;
+}
+
+.section-title {
+  text-align: center;
+  color: #1b3d6d;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.food-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2); /* Inner glow */
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+}
+
+.food-text {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.food-text h3 {
+  color: #d52b1e;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.food-text p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.food-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-image img {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .food-container {
+      grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+      font-size: 2rem;
+  }
+  
+  .food-text h3 {
+      font-size: 1.5rem;
+  }
 }

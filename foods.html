@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Traditional Foods - Discover Croatia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Croatia</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Traditional Foods of Croatia</h1>
-    <p>Discover the rich and delicious cuisine of Croatia, influenced by Mediterranean, Eastern European, and Balkan flavors.</p>
-  </header>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="croatia-flag.png" alt="About Croatia - Travel Guide" class="logo-image">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="foods.html">Foods</a></li>
+                <li><a href="tourist-spots.html">Tourist Spots</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="facts.html">Fun facts</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Popular Foods Section -->
+        <section class="popular-foods">
+            <h2 class="section-title">3 Most Popular Croatian Foods</h2>
+            
+            <div class="food-container">
+                <!-- Food 1 -->
+                <div class="food-card">
+                    <div class="food-text">
+                        <h3>Peka</h3>
+                        <p>A traditional dish of meat and vegetables slow-cooked under a metal bell, giving it a unique smoky flavor.</p>
+                    </div>
+                    <div class="food-image">
+                        <img src="images/peka.jpg" alt="Peka dish from Croatia">
+                    </div>
+                </div>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="overview.html">Overview</a></li>
-      <li><a href="history.html">History</a></li>
-      <li><a href="tourist.html">Tourist Spots</a></li>
-      <li><a href="facts.html">Fun Facts</a></li>
-    </ul>
-  </nav>
+                <!-- Food 2 -->
+                <div class="food-card">
+                    <div class="food-text">
+                        <h3>Crni Rižot</h3>
+                        <p>Black risotto made with cuttlefish or squid ink, giving it a distinctive color and rich seafood taste.</p>
+                    </div>
+                    <div class="food-image">
+                        <img src="images/crni-rizot.jpg" alt="Black risotto from Croatia">
+                    </div>
+                </div>
 
-  <section>
-    <h2>Popular Croatian Dishes</h2>
-    <ul>
-      <li><strong>Pasticada:</strong> A slow-cooked beef dish served with gnocchi.</li>
-      <li><strong>Cevapi:</strong> Grilled minced meat, usually served with flatbread and onions.</li>
-      <li><strong>Black Risotto:</strong> A Mediterranean seafood dish with squid ink for flavor.</li>
-    </ul>
-    <p><strong>For dessert:</strong> Try <em>Fritule</em>, small deep-fried doughnuts sprinkled with sugar!</p>
-  </section>
+                <!-- Food 3 -->
+                <div class="food-card">
+                    <div class="food-text">
+                        <h3>Pašticada</h3>
+                        <p>A slow-cooked beef dish marinated in vinegar and wine, typically served with homemade gnocchi.</p>
+                    </div>
+                    <div class="food-image">
+                        <img src="images/pasticada.jpg" alt="Pašticada dish from Croatia">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; Made by Jethro A. Tortugo.</p>
-  </footer>
 </body>
 </html>
