@@ -6,6 +6,16 @@ styles.css
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* adjust opacity */
+  z-index: -1; /* keeps it behind everything */
+}
 
 body {
     background-image: url('croatia-bg.jpg');
@@ -55,6 +65,10 @@ header.scrolled {
   transform: scale(1.05);
 }
 
+nav {
+  margin-right: 4rem; /* Adjust this to move nav closer to the center */
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -89,11 +103,12 @@ section {
     padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
     color: #1b3d6d;
     font-size: 2.5rem;
 }
@@ -161,11 +176,13 @@ p {
 .popular-foods {
   padding: 4rem 2rem;
   background: transparent;
+  margin-top: -4rem; /* Move section upward */
 }
 
 .section-title {
   text-align: center;
-  color: #1b3d6d;
+  color: #ffffff;
+  stroke: black;
   font-size: 2.5rem;
   margin-bottom: 3rem;
 }
@@ -180,7 +197,7 @@ p {
 
 .food-card {
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 
@@ -212,13 +229,16 @@ p {
 
 .food-image {
   height: 250px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
   overflow: hidden;
 }
 
 .food-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  object-fit: fill;
   transition: transform 0.5s ease;
 }
 
@@ -239,4 +259,58 @@ p {
   .food-text h3 {
       font-size: 1.5rem;
   }
+}
+
+.info-section {
+  margin-top: -30rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: transparent; /* fully transparent */
+  backdrop-filter: none;   /* remove blur effect */
+  border-radius: 0;        /* optional: remove rounded corners */
+  box-shadow: none;        /* remove any shadow effect */
+  margin-bottom: 2rem;
+
+}
+
+.info-card {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  border-radius: 12px;
+  backdrop-filter: blur(8px); /* Smooth frosted glass effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  color: #07a2ea; /* Keep your strong red */
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.7); /* Slightly stronger blur for contrast */
+  font-size: 1.7rem; /* Slightly larger for more presence */
+  margin-bottom: 0.5rem;
+  font-weight: 700; /* Makes it stand out more */
+  letter-spacing: 0.5px; /* Cleaner spacing for readability */
+  stroke: rgb(29, 26, 26);
+  stroke-dashoffset: 10%;
+}
+
+.info-card p {
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  stroke: #f2f2f2;
 }

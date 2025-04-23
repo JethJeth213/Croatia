@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview - About Croatia</title>
+    <title>About Croatia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header id="main-header">
         <div class="logo">
-            <a href="index.html">About Croatia</a>
+            <a href="index.html">
+                <img src="croatia-flag.png" alt="About Croatia - Travel Guide" class="logo-image">
+            </a>
         </div>
         <nav>
             <ul>
@@ -17,17 +19,36 @@
                 <li><a href="overview.html">Overview</a></li>
                 <li><a href="foods.html">Foods</a></li>
                 <li><a href="tourist-spots.html">Tourist Spots</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="facts.html">Fun facts</a></li>
+                
+
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <section>
-            <h1>Overview of Croatia</h1>
-            <p>Croatia is a beautiful country located in Southeast Europe, known for its stunning coastline along the Adriatic Sea, vibrant cities like Zagreb and Split, and over 1,000 islands. With a rich cultural history, Mediterranean climate, and breathtaking natural beauty, Croatia is a top destination for travelers seeking history, relaxation, and adventure.</p>
+        <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url('croatia-hero.jpg') center/cover no-repeat; color: white; text-align: center; padding: 2rem 2rem; border-radius: 0;">
+            <h1 style="color: rgb(224, 190, 19); font-size: 8rem;">Overview of Croatia</h1>
+            <p style="color: rgb(255, 255, 255); font-size: 1.5rem; max-width: 900px; stroke: black; margin: 0 auto;">Croatia is a picturesque country in Southeast Europe known for its stunning 
+                Adriatic coastline, historic cities, and beautiful national parks.</p>
+        </section>
+        <section class="info-section">
+            <div class="info-card">
+                <img src="coastline.jpg" alt="Description 1">
+                <h3>Beautiful Coastlines</h3>
+                <p>Experience the crystal-clear waters and scenic beaches of Croatia’s Adriatic coast.</p>
+            </div>
+            <div class="info-card">
+                <img src="heritage.jpg" alt="Description 2">
+                <h3>Rich Heritage</h3>
+                <p>Walk through centuries of history in cities like Dubrovnik and Split.</p>
+            </div>
+            <div class="info-card">
+                <img src="wonders.jpg" alt="Description 3">
+                <h3>Natural Wonders</h3>
+                <p>Explore national parks like Plitvice Lakes with stunning waterfalls and trails.</p>
+            </div>
         </section>
     </main>
+
 </body>
 </html>
